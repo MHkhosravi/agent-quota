@@ -1,0 +1,23 @@
+[project]
+name = "agent-quota"
+version = "0.1.0"
+description = "A Linux tray app for Claude Code, Codex, and Antigravity quotas"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pyside6-essentials>=6.8,<7",
+]
+
+[project.scripts]
+agent-quota = "agent_quota.__main__:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "ruff>=0.17.6",
+    "ty>=0.0.112",
+]
