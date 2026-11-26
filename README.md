@@ -5,10 +5,19 @@ Google Antigravity. Each limit shows its remaining percentage and refill time.
 Codex also shows redeemable resets and sends one desktop alert per confirmed
 reset within 24 hours of expiry.
 
+![Agent Quota tray popup showing demo quotas for Claude Code, Codex, and Antigravity](docs/agent-quota-preview.png)
+
+*Demo data.*
+
 ## Open the app
 
+Agent Quota is tested on Ubuntu GNOME. Install Python 3.12 and `uv`, and sign
+in to the agent CLIs you want to monitor. Desktop expiry alerts use `notify-send`.
+
 ```sh
-uv sync
+git clone https://github.com/MHkhosravi/agent-quota.git
+cd agent-quota
+uv sync --locked
 uv run agent-quota install-launcher
 uv run agent-quota
 ```
@@ -46,3 +55,7 @@ uv run ruff check
 uv run ruff format --check
 uv run ty check
 ```
+
+## License
+
+Agent Quota is available under the [MIT License](LICENSE).
